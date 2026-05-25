@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Monks | Master the Markets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --primary: 234 179 8;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+        
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: rgb(234 179 8);
+            transform: translateY(-2px);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(90deg, #facc15, #eab308, #facc15);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white font-['Inter'] overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-2xl">🧘‍♂️</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tight">Market</span>
+                    <span class="text-2xl font-bold tracking-tight gold-gradient">Monks</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+                <a href="#home" class="nav-link text-zinc-400 hover:text-white">Home</a>
+                <a href="#services" class="nav-link text-zinc-400 hover:text-white">Services</a>
+                <a href="#about" class="nav-link text-zinc-400 hover:text-white">About</a>
+                <a href="#resources" class="nav-link text-zinc-400 hover:text-white">Resources</a>
+                <a href="#contact" class="nav-link text-zinc-400 hover:text-white">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-6 py-3 bg-transparent border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-zinc-950 rounded-2xl font-semibold transition-all text-sm">
+                    Book Consultation
+                </button>
+                <button onclick="window.location.href='#login'" 
+                        class="px-6 py-3 bg-yellow-500 text-zinc-950 rounded-2xl font-semibold transition-all text-sm hover:bg-amber-400">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-yellow-500/30 px-4 py-2 rounded-3xl text-sm">
+                    <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-yellow-400 font-medium">Now Accepting New Students</span>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
+                    Trade Like a <span class="gold-gradient">Monk</span>.<br>
+                    Master the Markets.
+                </h1>
+                
+                <p class="text-xl text-zinc-400 max-w-lg">
+                    Elite stock market training and financial consulting. Discipline, wisdom, and consistent profits.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-8 py-4 bg-yellow-500 hover:bg-amber-400 text-zinc-950 rounded-3xl font-semibold text-lg transition-all flex items-center gap-3">
+                        Start Your Journey
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-8 py-4 border border-white/30 hover:border-white/60 rounded-3xl font-semibold text-lg transition-all">
+                        Watch Free Masterclass
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-8 text-sm pt-8">
+                    <div class="flex items-center gap-3">
+                        <div class="flex -space-x-4">
+                            <img src="https://picsum.photos/id/64/32/32" class="w-8 h-8 rounded-2xl border-2 border-zinc-950 object-cover" alt="">
+                            <img src="https://picsum.photos/id/201/32/32" class="w-8 h-8 rounded-2xl border-2 border-zinc-950 object-cover" alt="">
+                        </div>
+                        <div>
+                            <div class="text-green-400 font-semibold">4,892+</div>
+                            <div class="text-xs text-zinc-500">Successful Students</div>
+                        </div>
+                    </div>
+                    <div class="h-10 w-px bg-zinc-800"></div>
+                    <div>
+                        <div class="flex text-amber-400">
+                            ★★★★☆
+                        </div>
+                        <div class="text-xs text-zinc-500">4.98 Average Rating</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="absolute -inset-20 bg-gradient-to-r from-yellow-500/10 to-transparent rounded-[4rem] -rotate-6"></div>
+                <img src="https://picsum.photos/id/1015/800/900" 
+                     class="rounded-3xl shadow-2xl relative z-10 border border-yellow-500/20" 
+                     alt="Market Monks Trading">
+                <div class="absolute -bottom-6 -right-6 bg-zinc-900 p-6 rounded-3xl border border-yellow-500/30 backdrop-blur-xl">
+                    <div class="flex items-center gap-4">
+                        <div class="text-4xl">📈</div>
+                        <div>
+                            <div class="text-green-400 text-sm font-medium">+87.4% Avg. Return</div>
+                            <div class="text-xs text-zinc-500">Last 12 months • Batch 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-xs text-zinc-500">
+            <div>SCROLL TO EXPLORE</div>
+            <i class="fas fa-chevron-down animate-bounce"></i>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="border-t border-b border-zinc-800 py-6 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-6 opacity-75">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/NSE.svg/2560px-NSE.svg.png" class="h-8" alt="NSE">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/BSE_logo.svg/2560px-BSE_logo.svg.png" class="h-8" alt="BSE">
+                <div class="text-2xl font-light text-zinc-400">Zerodha</div>
+                <div class="text-2xl font-light text-zinc-400">Groww</div>
+                <div class="text-xl font-medium">SEBI Registered</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="inline-block px-4 py-1.5 bg-yellow-500/10 text-yellow-400 text-sm font-medium rounded-3xl mb-4">OUR OFFERINGS</div>
+                <h2 class="text-5xl font-bold">Wisdom Meets Markets</h2>
+                <p class="mt-4 text-zinc-400 max-w-md mx-auto">Choose your path to financial mastery</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-8">📚</div>
+                    <h3 class="text-3xl font-semibold mb-4">Stock Market Mastery Program</h3>
+                    <p class="text-zinc-400 mb-8">12-week intensive training covering technical analysis, fundamental research, risk management, and psychology of trading.</p>
+                    <ul class="space-y-3 text-sm mb-10">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Live Trading Sessions</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Community Access</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Lifetime Updates</li>
+                    </ul>
+                    <div class="text-4xl font-bold mb-1">₹24,999</div>
+                    <div class="text-xs text-zinc-500 mb-8">One Time • Next Batch: June 10</div>
+                    <button class="w-full py-4 bg-white text-zinc-950 rounded-2xl font-semibold group-hover:bg-yellow-400 transition-colors">Enroll Now</button>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group relative">
+                    <div class="absolute -top-3 right-6 bg-gradient-to-r from-yellow-400 to-amber-500 text-zinc-950 text-xs font-bold px-5 py-1 rounded-b-2xl">MOST POPULAR</div>
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center text-3xl mb-8">👔</div>
+                    <h3 class="text-3xl font-semibold mb-4">Premium Financial Consulting</h3>
+                    <p class="text-zinc-400 mb-8">One-on-one strategic financial planning, portfolio optimization, tax planning, and retirement strategies by seasoned experts.</p>
+                    <ul class="space-y-3 text-sm mb-10">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Personalized Portfolio</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Monthly Reviews</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Family Wealth Planning</li>
+                    </ul>
+                    <div class="text-4xl font-bold mb-1">₹4,999/mo</div>
+                    <div class="text-xs text-zinc-500 mb-8">Flexible Plans Available</div>
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                            class="w-full py-4 border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-zinc-950 rounded-2xl font-semibold transition-all">Book Discovery Call</button>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-zinc-900 border border-zinc-800 rounded-3xl p-10 group">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-violet-600 rounded-2xl flex items-center justify-center text-3xl mb-8">🎯</div>
+                    <h3 class="text-3xl font-semibold mb-4">Options &amp; Advanced Trading</h3>
+                    <p class="text-zinc-400 mb-8">Specialized program for experienced traders focusing on options strategies, futures, algorithmic trading basics, and hedging.</p>
+                    <ul class="space-y-3 text-sm mb-10">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Strategy Backtesting</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Risk Engine Training</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-400"></i> Live Market Analysis</li>
+                    </ul>
+                    <div class="text-4xl font-bold mb-1">₹34,999</div>
+                    <div class="text-xs text-zinc-500 mb-8">Advanced Cohort</div>
+                    <button class="w-full py-4 bg-white text-zinc-950 rounded-2xl font-semibold group-hover:bg-yellow-400 transition-colors">Join Waitlist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://picsum.photos/id/1016/800/700" class="rounded-3xl" alt="The Monk">
+                </div>
+                <div class="space-y-8">
+                    <div class="uppercase tracking-widest text-yellow-400 text-sm font-medium">Our Story</div>
+                    <h2 class="text-5xl font-bold leading-tight">Discipline is the edge in the market.</h2>
+                    <p class="text-lg text-zinc-400">
+                        Market Monks was founded by ex-investment bankers and full-time traders who realized that success in the market requires more than just strategies — it requires <span class="text-yellow-300">mindset, discipline, and patience</span>.
+                    </p>
+                    <p class="text-zinc-400">
+                        We combine ancient wisdom principles with modern quantitative techniques to help retail investors and professionals achieve consistent, stress-free profits.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-8 pt-8">
+                        <div>
+                            <div class="text-5xl font-bold text-yellow-400">8+</div>
+                            <div class="text-sm text-zinc-500">Years of Excellence</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-bold text-yellow-400">1200+</div>
+                            <div class="text-sm text-zinc-500">Crores Managed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">What Our Students Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-amber-400 mb-6">★★★★★</div>
+                    <p class="italic text-zinc-300">"Turned ₹2.5 lakhs into ₹18 lakhs in 14 months. The psychology training was a game changer."</p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <img src="https://picsum.photos/id/64/48/48" class="w-12 h-12 rounded-2xl" alt="">
+                        <div>
+                            <div class="font-semibold">Rahul Sharma</div>
+                            <div class="text-xs text-zinc-500">Software Engineer • Delhi</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-amber-400 mb-6">★★★★☆</div>
+                    <p class="italic text-zinc-300">"Finally understood how to control my emotions during market crashes. Best investment I've ever made."</p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <img src="https://picsum.photos/id/201/48/48" class="w-12 h-12 rounded-2xl" alt="">
+                        <div>
+                            <div class="font-semibold">Priya Malhotra</div>
+                            <div class="text-xs text-zinc-500">Doctor • Mumbai</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl">
+                    <div class="text-amber-400 mb-6">★★★★★</div>
+                    <p class="italic text-zinc-300">"Their options strategies helped me generate monthly income while keeping my job. Truly life-changing."</p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <img src="https://picsum.photos/id/1005/48/48" class="w-12 h-12 rounded-2xl" alt="">
+                        <div>
+                            <div class="font-semibold">Arjun Patel</div>
+                            <div class="text-xs text-zinc-500">Business Owner • Bangalore</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-28 bg-gradient-to-br from-zinc-900 to-black">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-5xl font-bold mb-6">Ready to Begin Your Journey?</h2>
+            <p class="text-xl text-zinc-400 mb-12">Join 4000+ disciplined traders who have transformed their financial lives with Market Monks.</p>
+            
+            <form class="max-w-md mx-auto space-y-6">
+                <input type="text" placeholder="Full Name" 
+                       class="w-full px-6 py-5 bg-zinc-900 border border-zinc-700 focus:border-yellow-500 rounded-3xl outline-none transition-colors">
+                <input type="email" placeholder="Email Address" 
+                       class="w-full px-6 py-5 bg-zinc-900 border border-zinc-700 focus:border-yellow-500 rounded-3xl outline-none transition-colors">
+                <input type="tel" placeholder="Phone Number" 
+                       class="w-full px-6 py-5 bg-zinc-900 border border-zinc-700 focus:border-yellow-500 rounded-3xl outline-none transition-colors">
+                
+                <button type="button" 
+                        class="w-full py-6 bg-yellow-500 hover:bg-amber-400 text-zinc-950 text-xl font-semibold rounded-3xl transition-all mt-8">
+                    Start Free Consultation
+                </button>
+            </form>
+            
+            <p class="text-xs text-zinc-500 mt-8">🔒 Your information is secure. Zero spam.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-zinc-900 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 bg-yellow-500 rounded-2xl flex items-center justify-center text-zinc-950 text-2xl">🧘‍♂️</div>
+                    <span class="text-2xl font-bold">Market Monks</span>
+                </div>
+                
+                <div class="text-zinc-500 text-sm text-center md:text-right">
+                    © 2026 Market Monks Private Limited<br>
+                    SEBI RIA Registration • All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included
+        
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+        
+        console.log('%cMarket Monks Website Loaded Successfully ✨', 'color: #eab308; font-size: 14px; font-family: monospace');
+    </script>
+</body>
+</html>
